@@ -19,13 +19,12 @@
 
 TARGET_OTA_ASSERT_DEVICE := g3,d850
 
-# Bluetooth
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d850/bluetooth
+# Kernel defconfig
+TARGET_KERNEL_CONFIG := liquid_d850_defconfig
 
-# Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_d850_defconfig
+# GCC
+TARGET_GCC_VERSION_ARM := 4.7-sm
+TARGET_GCC_VERSION_AND := 4.8-sm
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -48,6 +47,11 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d850/bluetooth
 
 # inherit from the proprietary version
 -include vendor/lge/d850/BoardConfigVendor.mk

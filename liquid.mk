@@ -1,12 +1,16 @@
 $(call inherit-product, device/lge/d850/full_d850.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Phone
+$(call inherit-product, vendor/liquid/config/common_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/liquid/config/nfc_enhanced.mk)
 
-PRODUCT_NAME := cm_d850
+PRODUCT_NAME := liquid_d850
+PRODUCT_DEVICE := d850
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-D850
+PRODUCT_MANUFACTURER := LGE
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g3" \
