@@ -18,14 +18,15 @@
 -include device/lge/g3-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := g3,d850
+LIQUIFY=true
 
 # Kernel defconfig
 TARGET_KERNEL_CONFIG := liquid_d850_defconfig
 TARGET_REQUIRES_BUMP := true
 
 # GCC
-TARGET_GCC_VERSION_ARM := 4.7-sm
-TARGET_GCC_VERSION_AND := 4.8-sm
+TARGET_GCC_VERSION_ARM := 4.9-sm
+TARGET_GCC_VERSION_AND := 4.8-linaro
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
